@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Weather App</h2>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="tables.html">Tables</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <input type="text" id="search-bar" placeholder="Search by city">
+        °C/°F
+        <label class="switch">
+          
+          <input type="checkbox" id="unit-toggle">
+          <span class="slider"></span> 
+        </label>
+        <div class="user-profile">User</div>
+      </header>
+
+      <!-- Error message display -->
+      <div id="error-message" style="color: red; display: none;"></div>
+
+      <section class="weather-data" id="weather-data">
+        <h2>Current Weather</h2>
+        <p>Enter a city to get the current weather information.</p>
+      </section>
+
+      <div id="forecast">
+        <h2>5-Day Weather Forecast</h2>
+        <div class="forecast-grid" id="forecast-grid">
+        </div>
+      </div>
+
+      <section class="charts">
+        <div class="chart vertical-bar">
+          <h4>Temperature Trend (Bar Chart)</h4>
+          <canvas id="barChart"></canvas>
+        </div>
+        <div class="chart doughnut">
+          <h4>Humidity Levels (Doughnut Chart)</h4>
+          <canvas id="doughnutChart"></canvas>
+        </div>
+        <div class="chart line-chart">
+          <h4>Wind Speed (Line Chart)</h4>
+          <canvas id="lineChart"></canvas>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
